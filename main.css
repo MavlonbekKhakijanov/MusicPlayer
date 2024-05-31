@@ -1,0 +1,150 @@
+/* main.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  border-radius: 48px;
+  background-color: #10439f;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 0px;
+}
+
+.cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #fff;
+  margin-top: -5rem;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.music__name {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 5rem;
+}
+
+.buttons button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  background-color: #ffffff44;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  background-color: #ffffff86;
+}
+
+.hidden {
+  display: none;
+}
+
+.waveform-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.waveform {
+  width: 80%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #000;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 113, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.1s linear;
+  border-radius: 5px;
+}
+
+.time {
+  color: #fff;
+  font-size: 12px;
+  margin: 0 10px;
+}
+/* main.css */
+
+/* ...previous styles... */
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+#volume-slider {
+  width: 100px;
+}
+
+/* ...rest of the styles... */
