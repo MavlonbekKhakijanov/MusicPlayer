@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
   };
 
-  // Update time and progress bar
   audioEl.addEventListener("timeupdate", function () {
     const percent = (audioEl.currentTime / audioEl.duration) * 100;
     progress.style.width = percent + "%";
@@ -84,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     durationEl.textContent = formatTime(audioEl.duration);
   });
 
-  // Allow clicking on the waveform to change audio position
   waveform.addEventListener("click", function (e) {
     const rect = waveform.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
@@ -93,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
     audioEl.currentTime = newTime;
   });
 
-  // Reset play/pause button when audio ends
   audioEl.addEventListener("ended", function () {
     state.classList.remove("play");
     play.innerHTML = `<i class="fa-solid fa-play"></i>`;
@@ -101,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
     currentTimeEl.textContent = "0:00";
   });
 
-  // Volume control
   volumeSlider.addEventListener("input", function () {
     audioEl.volume = volumeSlider.value;
     if (audioEl.volume === 0) {
